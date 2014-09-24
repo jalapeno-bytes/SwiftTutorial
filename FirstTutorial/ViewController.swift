@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  FirstTutorial
 //
-//  Created by Han van Oostende on 24-09-14.
+//  Created by Han van Oostende & Jeroen Wijnholds on 24-09-14.
 //  Copyright (c) 2014 JalapenoBytes. All rights reserved.
 //
 

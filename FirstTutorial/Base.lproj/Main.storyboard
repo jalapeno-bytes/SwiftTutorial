@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,47 +17,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOi-5c-iYA">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Go">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="348" y="47" width="30" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="didClickGo:" destination="vXZ-lx-hvc" eventType="touchDown" id="zzQ-Ue-aYi"/>
-                                </connections>
-                            </button>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h75-0H-97j">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="85" width="405" height="715"/>
-                                </variation>
                             </webView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nLF-6x-zMI">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="47" width="340" height="30"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="16" y="46" width="269" height="30"/>
                                 </variation>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOi-5c-iYA">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Go">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="354" y="46" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="didClickGo:" destination="vXZ-lx-hvc" eventType="touchDown" id="zzQ-Ue-aYi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jOi-5c-iYA" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="27" id="4cB-jf-mxz"/>
+                            <constraint firstItem="nLF-6x-zMI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="Ib1-CK-fva"/>
+                            <constraint firstItem="jOi-5c-iYA" firstAttribute="leading" secondItem="nLF-6x-zMI" secondAttribute="trailing" constant="9" id="Ljy-0V-yYc"/>
+                            <constraint firstItem="jOi-5c-iYA" firstAttribute="leading" secondItem="nLF-6x-zMI" secondAttribute="trailing" constant="9" id="Mgz-f8-pbj"/>
+                            <constraint firstItem="nLF-6x-zMI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="26" id="PAy-Qs-qJv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jOi-5c-iYA" secondAttribute="trailing" constant="5" id="PK1-XH-8Ih"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="h75-0H-97j" secondAttribute="bottom" id="U2J-eV-sHn"/>
+                            <constraint firstItem="h75-0H-97j" firstAttribute="top" secondItem="jOi-5c-iYA" secondAttribute="bottom" constant="7" id="Vbs-bu-LNN"/>
+                            <constraint firstItem="h75-0H-97j" firstAttribute="top" secondItem="nLF-6x-zMI" secondAttribute="bottom" constant="8" id="XKG-rn-A6Y"/>
+                            <constraint firstItem="h75-0H-97j" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="cbV-l0-YOt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h75-0H-97j" secondAttribute="trailing" constant="-22" id="irU-um-odS"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="jOi-5c-iYA"/>
                                 <exclude reference="h75-0H-97j"/>
                                 <exclude reference="nLF-6x-zMI"/>
+                                <exclude reference="jOi-5c-iYA"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Ib1-CK-fva"/>
+                                <exclude reference="PAy-Qs-qJv"/>
+                                <exclude reference="Vbs-bu-LNN"/>
+                                <exclude reference="XKG-rn-A6Y"/>
+                                <exclude reference="cbV-l0-YOt"/>
+                                <exclude reference="irU-um-odS"/>
+                                <exclude reference="4cB-jf-mxz"/>
+                                <exclude reference="Ljy-0V-yYc"/>
+                                <exclude reference="Mgz-f8-pbj"/>
+                                <exclude reference="PK1-XH-8Ih"/>
+                                <exclude reference="U2J-eV-sHn"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="jOi-5c-iYA"/>
                                 <include reference="h75-0H-97j"/>
                                 <include reference="nLF-6x-zMI"/>
+                                <include reference="jOi-5c-iYA"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Ib1-CK-fva"/>
+                                <include reference="PAy-Qs-qJv"/>
+                                <include reference="Vbs-bu-LNN"/>
+                                <include reference="XKG-rn-A6Y"/>
+                                <include reference="cbV-l0-YOt"/>
+                                <include reference="irU-um-odS"/>
+                                <include reference="4cB-jf-mxz"/>
+                                <include reference="Ljy-0V-yYc"/>
+                                <include reference="Mgz-f8-pbj"/>
+                                <include reference="PK1-XH-8Ih"/>
+                                <include reference="U2J-eV-sHn"/>
                             </mask>
                         </variation>
                     </view>
